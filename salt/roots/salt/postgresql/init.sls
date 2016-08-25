@@ -22,16 +22,16 @@ user-{{ name }}:
         - require:
             - service: postgresql
 
-database-{{ name }}:
+
+database-deployproj:
     postgres_database.present:
-        - name: {{ name }}
-        - owner: {{ name }}
+        - name: deployproj
+        - owner: rapidsms
         - template: template0
-        - encoding: UTF-8
-        - locale: en_US.UTF-8
-        - lc_collate: en_US.UTF-8
-        - lc_ctype: en_US.UTF-8
+        - encoding: UTF8
         - require:
-            - postgres_user: user-{{ name }}
+            - postgres_user: rapidsms
+
+
 {% endfor %}
 {% endif %}

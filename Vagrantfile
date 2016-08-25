@@ -17,13 +17,13 @@ Vagrant.configure("2") do |config|
     config.vm.network :forwarded_port, guest: 80, host: 8089
 
     ## Set your salt configs here
-    config.vm.provision :salt do |salt|
-        ## Minion config is set to ``file_client: local`` for masterless
-        salt.minion_config = "salt/minion"
+    #config.vm.provision :salt do |salt|
+    #    ## Minion config is set to ``file_client: local`` for masterless
+    #    salt.minion_config = "salt/minion"
 
-        ## Installs our example formula in "salt/roots/salt"
-        salt.run_highstate = true
-    end
+    #    ## Installs our example formula in "salt/roots/salt"
+    #    salt.run_highstate = true
+    #end
 end
 # salt-call --local state.highstate -l debug
 # http://www.barrymorrison.com/2013/Mar/11/deploying-django-with-salt-stack/

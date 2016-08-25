@@ -55,9 +55,10 @@ def staging():
 @task
 def production():
     env.environment = 'production'
-    env.hosts = [] # FIXME: Add production hosts
+    env.hosts = ['127.0.0.1'] # FIXME: Add production hosts
+    env.user =  'rapidsms'
     env.branch = 'master'
-    env.server_name = '' # FIXME: Add production server name
+    env.server_name = 'dev.example.loc' # FIXME: Add production server name
     setup_path()
 
 
