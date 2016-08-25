@@ -8,7 +8,4 @@ base-packages:
             - git-core
             - openssh-client
             - openssh-server
-            - subversion
-            - mercurial
-            - vim
             - ntp
