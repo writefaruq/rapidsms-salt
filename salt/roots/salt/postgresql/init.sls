@@ -24,7 +24,7 @@ user-{{ name }}:
 
 database-{{ name }}:
     postgres_database.present:
-        - name: {{ name}
+        - name: {{ name }}
         - owner: rapidsms
         - template: template0
         - encoding: UTF8
