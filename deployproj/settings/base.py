@@ -137,7 +137,7 @@ INSTALLED_APPS = (
     'django.contrib.sitemaps',
     # External apps
     "south",
-    "django_nose",
+    #"django_nose",
     "django_tables2",
     "selectable",
     # RapidSMS
